@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>SNS TimeLine</title>
+    <style>
+        .container {
+            background-color: #fcdada;
+            padding: 15px;
+            margin: 15px 5px;
+            border: 5px solid #ffa5a5;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .Input{
+            display: flex;
+            flex-direction: column;
+        }
+        .userInput {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .load  {
+            width: 130px;
+            height: 10px;
+            padding: 10px;
+            margin: 5px 5px 10px 235px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .Header {
+            background-color: #ffa5a5;
+            color: white;
+            width: 100%;
+
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="Header">
+        <h1>SNS TimeLine</h1>
+    </div>
+    <div class="container">
+        <div class="Input">
+            <div class="userInput" style="background-color: #ffa5a5; padding: 15px 15px 5px">
+                <input type="text" style="border: none; padding: 5px" placeholder="UserName"><br>
+                <textarea name="" id="" cols="50" rows="15" style="border: none" placeholder="Content"></textarea><br>
+            </div>
+            <div class="load">
+                <button onclick="postClick()" style="background-color: #3d7ea6; color: white">Upload</button>
+                <button onclick="newest()"style="background-color: #ec5858; color: white">Reload</button>
+            </div>
+        </div>
+        <div id="timeline" style="color: #fe7171">
+        </div>
+    </div>
+    <script>
+        let userInput = document.querySelector("input")
+        let postInput = document.querySelector("textarea")
+        let timeline = document.querySelector("#timeline")
+
+        window.onload = async () => {
+            const postResponse = await fetch('http://ec2-52-78-131-251.ap-northeast-2.compute.amazonaws.com/feed/',{
+                method:'get',
+            });
+            const posts = await postResponse.json();
+
+            for (let i=0; i<posts.length; i++){
+                console.log(posts[i]);
+                post(posts[i].owner, posts[i].content);
+            }
+        }
+
+        const postClick = async () => {
+            if(userInput.value == "") userInput.value = "Unknown";
+            if(postInput.value == "") alert("None.");
+            else {
+                post(userInput.value, postInput.value);
+
+                await fetch('http://ec2-52-78-131-251.ap-northeast-2.compute.amazonaws.com/feed/', {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        content: postInput.value,
+                        owner: userInput.value,
+                    }),
+                });
+                userInput.value = "";
+                postInput.value = "";
+            };
+        };
+
+
+        const post = (name, description) => {
+            let container = document.createElement('div');
+            let owner = document.createElement('h2');
+            let content = document.createElement('p');
+            owner.appendChild(document.createTextNode(name));
+            content.appendChild(document.createTextNode(description));
+
+            container.setAttribute('class', 'container')
+            container.appendChild(owner);
+            container.appendChild(content);
+
+            timeline.appendChild(container);
+        }
+
+        const newest = () => {
+            location.reload(true);
+        }
+    </script>
+</body>
+</html>
