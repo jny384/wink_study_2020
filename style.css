@@ -1,0 +1,227 @@
+.Page {
+    width: 375px;
+    height: 775px;
+    position: absolute;
+    background: #F4F4F4;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 375px;
+    height: 52px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+}
+.GoBack {
+}
+.Title {
+
+    width: 327px;
+    height: 21px;
+    text-align: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #333333;
+}
+
+.Menu {
+    background-image: url("image/Menu.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 375px;
+    height: 219px;
+    left: 0px;
+    top: 52px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.MenuName {
+    position: absolute;
+    width: 375px;
+    height: 62.96px;
+    top: 100.02px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 3.17333px 3.17333px rgba(0, 0, 0, 0.25);
+}
+.Location {
+    width: 375px;
+    height: 26.01px;
+    left: 0px;
+
+    margin-top: 200px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 3.17333px 3.17333px rgba(0, 0, 0, 0.25);
+}
+
+.Review {
+    position: absolute;
+    width: 375px;
+    height: 478px;
+    left: 0px;
+    top: 297px;
+
+    background: #FFFFFF;
+}
+
+.Grade {
+    margin-top: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.FirstGrade{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 82px;
+    top: 30px;
+}
+.SecondGrade {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 126.8px;
+    top: 30px;
+}
+.ThirdGrade {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 171.6px;
+    top: 30px;
+}
+.FourthGrade {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 216.4px;
+    top: 30px;
+}
+.FifthGrade {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 261px;
+    top: 30px;
+}
+
+.WriteReview  {
+    position: absolute;
+    width: 327px;
+    height: 142px;
+    left: 24px;
+    top: 82px;
+
+    background: #F9F9F9;
+    border-radius: 10px;
+}
+.ReviewText {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    border: none;
+    background-color: #F9F9F9;
+    color: #938E8E;
+}
+
+
+.ReviewPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.AddPhoto {
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    left: 24px;
+    top: 249px;
+
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.FirstPhoto{
+    position: absolute;
+    width: 101px;
+    height: 102px;
+    left: 137px;
+    top: 249px;
+
+    border-radius: 3px;
+}
+.SecondPhoto {
+    position: absolute;
+    width: 101px;
+    height: 102px;
+    left: 250px;
+    top: 249px;
+
+    border-radius: 3px;
+}
+.upload {
+    display: flex;
+    align-items: center;
+}
+.Button {
+    position: absolute;
+    width: 326px;
+    height: 43px;
+    left: 25px;
+    top: 381px;
+
+    background: linear-gradient(94.03deg, #82C3FF 0%, #C464FF 100%);
+    box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
