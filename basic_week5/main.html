@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>국식모.zip</title>
+    <style>
+
+        nav {
+            width: 800px;
+            background-color: white;
+            height: 50px;
+            line-height: 50px;
+            margin: auto;
+        }
+        nav > ul > li {
+            display: inline-block;
+            color: #fff;
+
+            justify-content: space-evenly;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 0px 15px;
+            opacity: 1.0;
+        }
+        .dropdown-content a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-style: italic;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header { width: 800px; height: 139px; background: white; margin: auto}
+
+        header h2 {text-align: center;}
+
+        main { width: 800px; height: 500px; border: 2px black; box-sizing: border-box; margin: auto; background-color: white}
+
+        section { width: 500px; height: 490px; background-color: white; padding: 3px; float: left}
+
+        article { width: 470px; height: 210px; background-color: white; border: 3px; margin: 10px auto}
+
+        aside { width: 260px; height: 466px; background-color: white; float: right; text-align: left; padding: 15px; text-align: center; align-items: center;}
+
+        footer { width: 800px; height: 50px; background-color: #F0EECE; margin: auto; clear: both; text-align: center}
+
+        .signup {
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .login {
+            background-color: #F2D283;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        body {
+            background-color: #F0EECE;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/header.jpg">
+    </header>
+    <nav style="flex: none; border: 2px black">
+        <ul style="background-color: #F2D283">
+            <li class="dropdown">
+                <div class="dropdown-menu" style="color:  #F2D283; font-weight: bold; font-size: 15pt; background-color: white; border-radius: 5px"> Best </div>
+                <div class="dropdown-content">
+                    <a href="#"> top10</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-menu" style="color:  #F2D283; font-weight: bold; font-size: 15pt; background-color: white; border-radius: 5px"> 교내 </div>
+                <div class="dropdown-content">
+                    <a href="#"> 플레이스앤</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-menu" style="color:  #F2D283; font-weight: bold; font-size: 15pt; background-color: white; border-radius: 5px">지하세계</div>
+                <div class="dropdown-content">
+                    <a href="#"> 지하세계</a>
+                    <a href="#"> 덤 </a>
+                    <a href="#"> 맛나슈퍼 </a>
+                    <a href="#"> 사발떡볶이</a>
+                    <a href="#"> 주당끼리</a>
+                    <a href="#"> 주락 </a>
+                    <a href="#"> 청춘노가리 </a>
+                    <a href="#"> 포차천국</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-menu" style="color:  #F2D283; font-weight: bold; font-size: 15pt; background-color: white; border-radius: 5px">정릉시장</div>
+                <div class="dropdown-content">
+                    <a href="#"> 식당을 추가해주세요!</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <img src="image/article1.jpg">
+            </article>
+            <article>
+                <img src="image/article2.jpg">
+            </article>
+        </section>
+        <aside>
+            <div class="login">
+                <h2 style="color: white">Login</h2>
+                <span style="font-size: 8pt; font-weight: bold; color: white"> 국민대_식당_모음.zip은 여러분의 참여를 기다립니다.</span><br>
+                <p><input type="text" style=" padding: 5px; border: none" placeholder="아이디"></p>
+                <input type="password" style="padding: 5px; border: none" placeholder="비밀번호"><br>
+                <p><button style="background-color: white; border: none; color: #F2D283"> Login </button></p>
+                <div class="signup">
+                    <a href="#" style="color: gray; text-decoration: underline; font-size: 8px">아이디 찾기</a>
+                    <a style="color: gray; font-size: 8px"> | </a>
+                    <a href="#" style="color: gray; text-decoration: underline; font-size: 8px">비밀번호 찾기</a>
+                    <a style="color: gray; font-size: 8px"> | </a>
+                    <a href="#" style="color: gray; text-decoration: underline; font-size: 8px">회원가입</a>
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <span style="font-size: 8pt"> by 정나영</span>
+        </footer>
+    </main>
+
+
+</body>
+</html>
