@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Week6 : Login</title>
+  </head>
+  <bod style="display:flex; justify-content:center; align-items: center;">
+    <form class="login_form" style="display:flex; flex-direction: column; justify-content:space-evenly; align-items: center; background-color:aquamarine; padding: 30px; border: solid blue 3px; ">
+        <div class="id_input">
+            ID : <input type="text" id="ID" style="width: fit-content;"/>
+        </div>
+        <div class="pw_input">
+            PW : <input type="password" id="PW" style="width: fit-content;"/>
+        </div>    
+        <button onclick="login()" style="background-color: blue;width: fit-content; margin-top: 15px;">Login</button>
+    </form>
+
+    <script>
+        function login() {
+            let ID = "zerome";
+            let PW = "20010901";
+
+            if (ID == document.getElementById('ID').value && PW == document.getElementById('PW')) {
+                alert("사이트에 오신 걸 환영합니다.");
+            } else if (ID == document.getElementById('ID').value && PW != document.getElementById('PW')) {
+                alert("비밀번호가 틀렸습니다.");
+            } else if (ID != document.getElementById('ID').value && PW == document.getElementById('PW')) {
+                alert("아이디가 틀렸습니다.");
+            } else {
+                alert("아이디와 비밀번호가 모두 틀렸습니다.");
+            }
+        }
+    </script>
+  </bod>
+</html>
